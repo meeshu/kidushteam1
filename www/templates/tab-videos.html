@@ -1,0 +1,20 @@
+<ion-view view-title="Videos">
+         
+        <ion-content class="padding has-header">
+            <!-- LIST -->
+            <div class="row gallery">
+                <div class="list card col col-25" ng-repeat="video in videos">
+                    <a class="cardclick" ng-href="#/details/{{video.id}}">
+                    <div class="item item-image">
+                      <img ng-src="{{video.img}}"/> 
+                    </div>
+                    <div class="item item-icon-left assertive">
+                    <i class="icon ion-play"></i>
+                    <p> Watch</p>
+                    <h2> {{video.title}} </h2>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </ion-content>
+</ion-view>
