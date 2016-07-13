@@ -37,10 +37,14 @@ angular.module('Heart.controllers', [])
         login.anonymousLogin = anonymousLogin;
     })
 
-    .controller('VideosCtrl', function (VideosModel, $rootScope, $scope) {
+    .controller('VideosCtrl', function (VideosModel, $rootScope, $scope,$state) {
        $scope.videos=[];
         $scope.video=[];
-
+        
+        $scope.changeView = function(videoId){
+            
+            $state.go('details',{'id': videoId});
+        }
         function goToBackand() {
             window.location = 'http://docs.backand.com';
         }
@@ -51,13 +55,6 @@ angular.module('Heart.controllers', [])
                     console.log('$scope.videos')
                     console.log($scope.videos);
                 });
-        
-
-       
-
-       
-
-      
 
         $rootScope.$on('authorized', function () {
            
@@ -70,10 +67,7 @@ angular.module('Heart.controllers', [])
 
         $rootScope.$on('logout', function () {
             clearData();
-        });
-
-       
-        
+        });    
 
     })
 
@@ -87,9 +81,7 @@ angular.module('Heart.controllers', [])
     
     var videoId = $stateParams.id;
     console.log(VideosModel.GetVideobyId(videoId));     
-    $scope.video=VideosModel.GetVideobyId(videoId);
-                
-      
+    $scope.video=VideosModel.GetVideobyId(videoId);   
     
 });
 
