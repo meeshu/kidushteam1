@@ -1,26 +1,36 @@
-<ion-view view-title="Login">
-    <ion-content class="padding has-header">
-        
-        <div class="bar bar-subheader">
-            <form ng-submit="login.signin()">
-                <div class="list">
+<ion-view id="login" view-title="Login" hide-nav-bar="true">
+    <ion-content class="padding"  scroll="false">
+        <form ng-submit="login.signin()">
+                <div class="row responsive-md">
+                    <div class="col col-50 col-offset-25">
+                        <div class="header padding text-center">
+                            <img src="img/logo.png" alt="Your logo here"/>
+                        </div>
+                        <div class="list">
 
-                    <label class="item item-input">
-                        <input id="email" name="email" type="email" placeholder="Your email" ng-model="login.email">
-                    </label>
-                    <label class="item item-input">
-                        <input id="password" name="password" type="password" placeholder="Your password" ng-model="login.password">
-                    </label>
-                </div>
-                <div class="padding">
-                    <button class="button button-block button-positive" type="submit">
-                        Login
-                    </button>
-                      <p class="text-center">
-                            <a href="#/forgot-password">Forgot password</a>
-                    </p>
-                </div>
+                            <label class="item item-input">
+                                <input id="email" name="email" type="email" placeholder="Your email" ng-model="login.email">
+                            </label>
+                            <label class="item item-input">
+                                <input id="password" name="password" type="password" placeholder="Your password" ng-model="login.password">
+                            </label>
+                        </div>
+                        
+                            <button class="button button-block button-positive" type="submit">
+                                Login
+                            </button>
+                            <div class="row row-no-padding">
+                                <div class="col">
+                                      <button class="button button-clear button-light">
+                                            Forgot password?
+                                      </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </form>
-        </div>
     </ion-content>
 </ion-view>
+
+
+ 

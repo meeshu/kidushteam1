@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Heart</title>
-
+ 
     <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
+
+    
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
 
@@ -30,9 +30,9 @@
 <!--
   The nav bar that will be updated as we navigate between views.
 -->
-<ion-nav-bar class="bar bar-header bar-calm nav-title-slide-ios7">
-    <ion-nav-back-button side="left" class="button-icon">
-      <span class="icon ion-ios7-arrow-left"></span>
+<ion-nav-bar class="bar bar-header bar-calm">
+    <ion-nav-back-button side="left" ng-click="myGoBack()" class="button-icon">
+      <i class="ion-arrow-left-c"></i> Back
     </ion-nav-back-button>
 </ion-nav-bar>
 <!--

@@ -26,8 +26,7 @@ angular.module('Heart.services', [])
         GetAll: function(){ 
             return $http.get(getUrl()).then(function(response){
                 videos = response.data.data;
-                console.log('getall');
-                console.log(videos);
+              
                 return response.data.data;
             });
         },
@@ -37,7 +36,7 @@ angular.module('Heart.services', [])
             for(i=0;i<videos.length;i++){
                 console.log('pitb');
                 if(videos[i].id == videoId){
-                    console.log('pitb');
+                   
                     return videos[i];
                     }
                 }

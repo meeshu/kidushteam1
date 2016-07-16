@@ -1,17 +1,17 @@
-<ion-view view-title="Videos">
+<ion-view id="videos" view-title="Videos">
          
-        <ion-content class="padding has-header">
+        <ion-content class="padding has-header" scroll="true">
             <!-- LIST -->
             <div class="row gallery">
-                <div class="list card col col-25 responsive-md" ng-repeat="video in videos" >
+                <div class="card list col col-25 responsive-md" ng-repeat="video in videos" >
                     <div ng-click="changeView({{video.id}})">
                     <div class="item item-image ">
                       <img ng-src="{{video.img}}"/> 
                     </div>
                     <div class="item item-icon-left assertive">
                     <i class="icon ion-play"></i>
-                    <p> Watch</p>
-                    <h2> {{video.title}} </h2>
+                    <p>Watch</p>
+                     <h2> {{video.tit}} </h2>
                     </div>
                     </div>
                 </div>

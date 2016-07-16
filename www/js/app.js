@@ -60,6 +60,15 @@ angular.module('Heart', ['ionic', 'backand', 'Heart.controllers', 'Heart.service
                     }
                 }
             })
+         .state('tab.fav', {
+                url: '/fav',
+                views: {
+                    'tab-fav': {
+                        templateUrl: ''
+                        
+                    }
+                }
+            })
         .state('tab.help', {
                 url: '/help',
                 views: {

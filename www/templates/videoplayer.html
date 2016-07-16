@@ -1,6 +1,12 @@
-<ion-view title="Now Playing {{video.title}}">
+<ion-view id="player" title="Now Playing {{video.tit}}">
+     
         <div class="fullscreen-player">
-          <video controls autoplay allowfullscreen frameborder="0"><source ng-src="{{video.src | trusted}}" type="video/mp4" controls/></video>
-            
+          <video  id="vp" class="centerme" style="
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100%;
+" controls="controls" autoplay allowfullscreen frameborder="0"><source ng-src="{{video.srcUrl | trusted}}" type="video/mp4" controls/></video>  
         </div>
+  
 </ion-view>

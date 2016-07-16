@@ -82,6 +82,6 @@ angular.module('Heart.controllers', [])
     var videoId = $stateParams.id;
     console.log(VideosModel.GetVideobyId(videoId));     
     $scope.video=VideosModel.GetVideobyId(videoId);   
-    
+
 });
 
